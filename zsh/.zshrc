@@ -10,6 +10,6 @@ plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-[[-f ~/.zsh/path.zsh]] && source ~/.zsh/path.zsh
-[[-f ~/.zsh/aliases.zsh]] && source ~/.zsh/aliases.zsh
-[[-f ~/.zsh/functions.zsh]] && source ~/.zsh/functions.zsh
+[[-f ~/.zsh/functions]] && source ~/.zsh/functions
+[[-f ~/.zsh/path]] && source ~/.zsh/path
+[[-f ~/.zsh/aliases]] && source ~/.zsh/aliases
