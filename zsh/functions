@@ -16,12 +16,17 @@ addToPathFront() {
     fi
 }
 
+validateYaml() {
+    python -c 'import yaml,sys;yaml.safe_load(sys.stdin)' < $1
+}
+
 useSSH() {
     AGENT_INFO=$(ps -ef | grep "ssh-agent" | grep -v "grep" | head -n 1)
     if [ -z "$AGENT_INFO" ]; then
         echo "creating new agent"
         eval "$(ssh-agent -s)"
     fi
+
     if [ -z "$SSH_AUTH_SOCK" ] || ! [ -e $SSH_AUTH_SOCK ]; then
         export SSH_AGENT_PID=$(echo $AGENT_INFO | awk '{print $2}')
         export SSH_AUTH_SOCK=$(ls -l /tmp/ssh-*/agent.* | grep $((SSH_AGENT_PID -1)) | awk '{print $9}')
