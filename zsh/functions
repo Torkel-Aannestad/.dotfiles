@@ -16,16 +16,14 @@ addToPathFront() {
     fi
 }
 
-#needs work
 useSSH() {
-    if [ -z "$SSH_AGENT_PID" ] || ! kill -0 $SSH_AGENT_PID 2>/dev/null; then
-        echo "No valid SSH Agent found."
+    if [ -z "$SSH_AGENT_PID" ] || ! ps -p $SSH_AGENT_PID 2>/dev/null; then
+        echo "No SSH Agent found"
 
         AGENT_INFO=$(ps -ef | grep "ssh-agent" | grep -v "grep" | head -n 1)
         if [ -n "$AGENT_INFO" ]; then
-           
             AGENT_PID=$(echo $AGENT_INFO | awk '{print $2}')
-            SOCKET=$(ls -l /tmp/ssh-*/agent.* | grep $AGENT_PID | awk '{print $9}')
+            SOCKET=$(ls -l /tmp/ssh-*/agent.* | grep $((AGENT_PID -1)) | awk '{print $9}')
             export SSH_AGENT_PID=$AGENT_PID
             export SSH_AUTH_SOCK=$SOCKET
             echo "Connected to an existing ssh-agent: PID=$SSH_AGENT_PID, Socket=$SSH_AUTH_SOCK"
@@ -37,7 +35,7 @@ useSSH() {
 
     ssh-add -l &>/dev/null
     if [ $? != 0 ]; then
-        echo "Adding keys..."
+        echo "Adding keys"
         ssh-add
     else
         echo "All good"
