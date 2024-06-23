@@ -8,7 +8,6 @@ alias cat="batcat"
 
 
 alias ls="ls -la"
-alias cdpr="cd \$(find ~/projects/ ~/projects/bootdotdev/ -mindepth 1 -maxdepth 1 -type d | fzf )"
 
 alias czsh="batcat $DOTFILES/zsh/.config/.zshrc"
 alias ezsh="vim $DOTFILES/.zshrc"
