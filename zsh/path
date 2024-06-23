@@ -2,6 +2,7 @@
 
 export GOPATH=$HOME/go
 export DOTFILES=$HOME/.dotfiles
+export PR="$HOME/projects"
 
 addToPath() /usr/local/go/bin
 addToPath() $GOPATH/bin

@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
-alias dotFileInstall="$DOTFILES/install"
 alias my_ip="ip address | grep -o \"inet 192.*/\" | awk '{ print \$2 }' | tr / ' ' | xargs"
 alias python="python3"
-
-alias ls="ls -la"
-#  alias ls="eza --icons --group-directories-first"
-#  alias ll="eza --icons --group-directories-first -l"
-
 alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
+alias cat="batcat"
 
-alias f5="exec zsh"
+
+alias ls="ls -la"
+alias cdpr="cd \$(find ~/projects/ ~/projects/bootdotdev/ -mindepth 1 -maxdepth 1 -type d | fzf )"
+
+alias czsh="batcat $DOTFILES/zsh/.config/.zshrc"
+alias ezsh="vim $DOTFILES/.zshrc"
+alias dotFileInstall="$DOTFILES/install_ubuntu"
+alias f5="dotFileInstall && source ~/.zshrc"
+

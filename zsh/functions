@@ -41,3 +41,8 @@ useSSH() {
         echo "all good"
     fi
 }
+
+fd() {
+  DIR=`find * -maxdepth 1 -type d -print 2> /dev/null | fzf` \
+    && cd "$DIR"
+}
