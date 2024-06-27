@@ -6,9 +6,9 @@ plugins=(git ) #zsh-autosuggestions
 source $ZSH/oh-my-zsh.sh
 
 #config
-[[ -f ~/.zsh/functions ]] && source ~/.zsh/functions
-[[ -f ~/.zsh/path ]] && source ~/.zsh/path
-[[ -f ~/.zsh/aliases ]] && source ~/.zsh/aliases
+[[ -f ~/.zsh/functions ]] && source ~/.zsh/.config/functions
+[[ -f ~/.zsh/path ]] && source ~/.zsh/.config/path
+[[ -f ~/.zsh/aliases ]] && source ~/.zsh/.config/aliases
 
 #fzf
 source /usr/share/doc/fzf/examples/key-bindings.zsh
