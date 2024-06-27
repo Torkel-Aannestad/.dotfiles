@@ -6,7 +6,6 @@ alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
 alias cat="batcat"
 
-
 alias ls="ls -la"
 
 alias czsh="batcat $DOTFILES/zsh/.config/.zshrc"
