@@ -8,8 +8,8 @@ alias cat="batcat"
 
 alias ls="ls -la"
 
-alias czsh="batcat $DOTFILES/zsh/.config/.zshrc"
-alias ezsh="vim $DOTFILES/.zshrc"
+alias czsh="batcat $DOTFILES/zsh/.zshrc"
+alias ezsh="nano $DOTFILES/zsh/.zshrc"
 alias dotFileInstall="$DOTFILES/install_ubuntu"
 alias f5="dotFileInstall && source ~/.zshrc"
 
