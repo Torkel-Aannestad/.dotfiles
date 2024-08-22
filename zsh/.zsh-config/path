@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
 export GOPATH=$HOME/go
+export RUSTPATH=$HOME/.cargo
 export DOTFILES=$HOME/.dotfiles
 export PR="$HOME/projects"
 
 addToPath /usr/local/go/bin
 addToPath $GOPATH/bin
+addToPath $RUSTPATH/bin
+addToPath $HOME/tailwind
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.local/scripts
 
-#add node
+
