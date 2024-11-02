@@ -23,3 +23,6 @@ export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'" #
 export FZF_ALT_C_COMMAND='find . -type d ' #--color=never --hidden
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
+#nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

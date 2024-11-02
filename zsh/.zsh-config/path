@@ -3,13 +3,17 @@
 export GOPATH=$HOME/go
 export RUSTPATH=$HOME/.cargo
 export DOTFILES=$HOME/.dotfiles
-export PR="$HOME/projects"
+# export PR="$HOME/projects"
 
-addToPath /usr/local/go/bin
-addToPath $GOPATH/bin
-addToPath $RUSTPATH/bin
-addToPath $HOME/tailwind
+addToPathFront /usr/local/go/bin
+addToPathFront $GOPATH/bin
+addToPathFront $RUSTPATH/bin
+addToPathFront $HOME/tailwind
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.local/scripts
+# addToPathFront $HOME/.yarn/bin
+#addToPathFront $HOME/.local/.npm-global/bin
 
-
+# pnpm
+#export PNPM_HOME="/home/mpaulson/.local/share/pnpm"
+#export PATH="$PNPM_HOME:$PATH"

@@ -15,4 +15,5 @@ alias cpath="batcat $DOTFILES/zsh/.zsh-config/path"
 alias edot="code $DOTFILES"
 alias dotFileInstall="$DOTFILES/install_ubuntu"
 alias f5="dotFileInstall && source ~/.zshrc"
+alias proj="cd $HOME/projects"
 
