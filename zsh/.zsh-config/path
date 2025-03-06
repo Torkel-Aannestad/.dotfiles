@@ -6,6 +6,7 @@ export DOTFILES=$HOME/.dotfiles
 # export PR="$HOME/projects"
 
 addToPathFront /usr/local/go/bin
+addToPathFront /usr/lib/mime/packages/
 addToPathFront $GOPATH/bin
 addToPathFront $RUSTPATH/bin
 addToPathFront $HOME/tailwind
