@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 alias my_ip="ip address | grep -o \"inet 192.*/\" | awk '{ print \$2 }' | tr / ' ' | xargs"
-alias python="python3"
-alias py="python3"
+alias python="python3.13"
+alias py="python3.13"
 alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
 # alias cat="batcat"
