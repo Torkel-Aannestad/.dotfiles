@@ -49,6 +49,6 @@ fd() {
 }
 #find project
 fp(){
-    DIR=`find ~/projects/ ~/projects/bootdotdev/ ~/projects/test-projects/ -mindepth 1 -maxdepth 1 -type d | fzf `\
+    DIR=`find ~/projects/ ~/projects/bootdotdev/ ~/projects/test-projects/ ~/projects/frontend-masters -mindepth 1 -maxdepth 1 -type d | fzf `\
     && cd "$DIR"
 }

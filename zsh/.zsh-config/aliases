@@ -2,9 +2,10 @@
 
 alias my_ip="ip address | grep -o \"inet 192.*/\" | awk '{ print \$2 }' | tr / ' ' | xargs"
 alias python="python3"
+alias py="python3"
 alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
-alias cat="batcat"
+# alias cat="batcat"
 
 alias ls="ls -la"
 
